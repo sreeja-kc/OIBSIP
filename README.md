@@ -1,7 +1,7 @@
 # OIBSIP
-Oasis Infobyte Web Development Projects(Level2)
+Oasis Infobyte Web Development Projects(Level 2)
 
-https://github.com/sreeja-kc/OIBSIP/assets/91666164/b417a0ff-ea3a-42ba-a47e-092ddcb43cdd
+[https://github.com/sreeja-kc/OIBSIP/assets/91666164/b417a0ff-ea3a-42ba-a47e-092ddcb43cdd](https://github.com/sreeja-kc/OIBSIP/assets/91666164/c283c926-86ea-4dec-b868-f5f9d771620b)
 ![van](https://github.com/sreeja-kc/OIBSIP/assets/91666164/4bbf3f9d-03c1-49c1-8ba6-f9beebc4d972)
 ![sun](https://github.com/sreeja-kc/OIBSIP/assets/91666164/1b7bba41-25be-47b1-9808-7491f95545aa)
 ![rest](https://github.com/sreeja-kc/OIBSIP/assets/91666164/feffe505-1552-4613-b45a-929f16f3d159)
