@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Van Gogh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .header {
+            background-color: #1f0f7e;
+            color: #ebee39;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        .contain {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1404046e;
+            border-radius: 10px;
+            color: white;  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bio-box {
+            padding: 20px;
+            background: rgba(10, 1, 1, 0.5);
+            border-radius: 10px;
+            width: 80%;
+        }
+        .image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            image-resolution: 700dpi;
+            box-shadow: 0 0 10px rgba(245, 235, 235, 0.63);
+        }
+
+        .pic {
+            display: flex;
+            justify-content: space-around;
+            width: 600px
+        }
+
+        .pic img {
+            width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(245, 235, 235, 0.63);
+            margin-bottom: 40px;
+            margin-right: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            color:white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 500px;
+        }
+        .lists2 {
+            font-style: italic;
+            color:white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 200px;
+        }
+        .lists {
+            font-style: italic;
+            color:white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 50px;
+        }
+        .footer {
+            background-color: #1f0f7e;
+            color: #ebee39;
+            padding: 5px;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="video-background">
+        <source src="./pic/2023-09-15 Ur Daddy 1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="header">
+        <h1>Vincent Van Gogh</h1>
+    </div>
+    
+        <div class="content">
+            <img class="image" src="./pic/van.jpg" alt="Van Gogh">
+        <div class="bio-box">
+            <p>Vincent van Gogh, in full Vincent Willem van Gogh, (born March 30, 1853, Zundert, Netherlands—died July 29,
+                1890, Auvers-sur-Oise, near Paris, France), Dutch painter, generally considered the greatest after Rembrandt
+                van Rijn, and one of the greatest of the Post-Impressionists. The striking colour, emphatic brushwork, and
+                contoured forms of his work powerfully influenced the current of Expressionism in modern art. Van Gogh’s art
+                became astoundingly popular after his death, especially in the late 20th century, when his work sold for
+                record-breaking sums at auctions around the world and was featured in blockbuster touring exhibitions.
+                In part because of his extensive published letters, Van Gogh has also been mythologized in the popular
+                imagination as the quintessential tortured artist.</p>
+            <br><br>
+        </div>
+        </div>
+    
+        <div class="contain">
+            <div class="quote">
+                <p><b>Famous paintings~</b></p><br>
+                <div class="pic">
+                    <img src="./pic/bed.jpg">
+                    
+                    <img src="./pic/sun.jpg">
+                    
+                    <img src="./pic/rest.jpg">
+                    
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    
+    <div class="container">
+    <div class="bio-box">
+        <p class="lists" color="white"><b>"Some famous quotes by Van Gogh:"</b><br></p>
+        <p class="lists2" color="white">
+                "I put my heart & soul into my work, & have lost my mind in the process."<br>
+                "I would rather die of passion than of boredom."<br>
+                "The beginning is perhaps more difficult than anything else, but keep heart, it will turn out all
+                right."<br>
+                "I experience a period of frightening clarity in those moments when nature is so beautiful. I am no longer
+                sure of myself, and the paintings appear as in a dream."<br>
+        </p>
+    </div>
+    </div>
+  
+    <div class="footer">
+        <p>Created with admiration for Van Gogh | 2023</p>
+    </div>
+</body>
+</html>
