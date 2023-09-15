@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: darkslategrey;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .todo-list, .completed-list {
+            max-width: 800px;
+            width: 100%;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(252, 240, 240, 0.459);
+            padding: 20px;
+            margin: 0 20px;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .task span {
+            flex-grow: 1;
+        }
+
+        .task button {
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .task button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+    <script>
+        
+        function addTodo() {
+            var todoText = document.getElementById('newTodo').value;
+            if (todoText.trim() !== '') {
+                var todoList = document.getElementById('todoList');
+                var newTodo = document.createElement('li');
+                newTodo.className = 'task';
+                var now = new Date();
+                newTodo.innerHTML = `
+                    <span>${todoText}</span>
+                    <button onclick="markComplete(this)">Complete</button>
+                    <button onclick="editTask(this)">Edit</button>
+                    <button onclick="deleteTask(this)">Delete</button>
+                `;
+                todoList.appendChild(newTodo);
+                document.getElementById('newTodo').value = '';
+            }
+        }
+
+        function markComplete(button) {
+            var completedList = document.getElementById('completedList');
+            var task = button.parentElement;
+            task.removeChild(button);
+            completedList.appendChild(task);
+        }
+
+        function editTask(button) {
+            var task = button.parentElement;
+            var span = task.querySelector('span');
+            var newText = prompt("Edit Task:", span.textContent);
+            if (newText !== null) {
+                span.textContent = newText;
+            }
+        }
+
+        function deleteTask(button) {
+            var task = button.parentElement;
+            task.remove();
+        }
+
+        function formatDate(date) {
+            var options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        }
+    </script>
+    </script>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="container">
+        <div class="todo-list">
+            <h2>Pending Tasks</h2>
+            <input type="text" id="newTodo" placeholder="Add a new task...">
+            <button onclick="addTodo()">Add Task</button>
+            <ul id="todoList"></ul>
+        </div>
+        <div class="completed-list">
+            <h2>Completed Tasks</h2>
+            <ul id="completedList"></ul>
+        </div>
+    </div>
+
+</body>
+</html>

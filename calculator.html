@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf3eb;
+        }
+        .container{
+            height: 650px;
+            width: 800px;
+            background-color: #edffcb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #edfd5c;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(54, 39, 39, 0.2);
+        }
+
+        .calculator h2 {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .calculator input[type="text"] {
+            width: 260px;
+            height: 50px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .calculator .btn {
+            width: 20%;
+            padding: 10px;
+            font-size: 20px;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            border:#fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .calculator .btn.clear {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .calculator .btn.equals {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .calculator .btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+    
+    <script>
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            const expression = document.getElementById('display').value;
+            try {
+                document.getElementById('display').value = eval(expression);
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="display" readonly>
+        <div>
+            <button class="btn" onclick="addToDisplay('7')">7</button>
+            <button class="btn" onclick="addToDisplay('8')">8</button>
+            <button class="btn" onclick="addToDisplay('9')">9</button>
+            <button class="btn" onclick="addToDisplay('+')">+</button>
+        </div>
+        <div>
+            <button class="btn" onclick="addToDisplay('4')">4</button>
+            <button class="btn" onclick="addToDisplay('5')">5</button>
+            <button class="btn" onclick="addToDisplay('6')">6</button>
+            <button class="btn" onclick="addToDisplay('-')">-</button>
+        </div>
+        <div>
+            <button class="btn" onclick="addToDisplay('1')">1</button>
+            <button class="btn" onclick="addToDisplay('2')">2</button>
+            <button class="btn" onclick="addToDisplay('3')">3</button>
+            <button class="btn" onclick="addToDisplay('*')">*</button>
+        </div>
+        <div>
+            <button class="btn" onclick="addToDisplay('0')">0</button>
+            <button class="btn" onclick="addToDisplay('.')">.</button>
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+            <button class="btn" onclick="addToDisplay('/')">/</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
